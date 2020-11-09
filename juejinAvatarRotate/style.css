@@ -1,0 +1,20 @@
+.rotate-wrap {
+    background: #f5f5f5;
+}
+.avatar-wrap {
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background: #f5f5f5;
+    background-image: url('./beauty.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.avatar-wrap:hover {
+    transform: rotate(600turn);
+    transition-delay: 1s;
+    transition-property: all;
+    transition-duration: 60s;
+    transition-timing-function: cubic-bezier(.32, 0, .75, 0.9);
+}
