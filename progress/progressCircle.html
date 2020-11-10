@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .circle-progress {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+    }
+    .circle-wrap {
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        overflow: hidden;
+    }
+    .left {
+        left: 0;
+    }
+    .right {
+        right: 0;
+    }
+    .circle {
+        width: 180px;
+        height: 180px;
+        border:10px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+        transform : rotate(45deg); 
+    }
+    .left-circle {
+        left: 0;
+        border-bottom:10px solid tomato;
+        border-left: 10px solid tomato;
+        animation: circle_left 3s linear infinite;
+    }
+    .right-circle {
+        right: 0;
+        border-top:10px solid tomato;
+        border-right:10px solid tomato;
+        animation: circle_right 3s linear infinite;
+    }
+    @keyframes circle_right {
+        0% {
+            transform: rotate(-135deg);
+        }
+        50%,100% {
+            transform: rotate(45deg);
+        }
+    }
+    @keyframes circle_left {
+        0%,50% {
+            transform: rotate(-135deg);
+        }
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+</style>
+<body>
+    <div class="circle-progress">
+        <div class="circle-wrap left">
+            <div class="left-circle circle"></div>
+        </div>
+        <div class="circle-wrap right">
+            <div class="right-circle circle"></div>
+        </div>
+    </div>
+</body>
+</html>
